@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiCo Cafe</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="container-header">
+            <a href="#" class="logo"><img src="images/logo.jpg" alt="FiCo Cafe Logo"></a>
+            <div class="container-header-content">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <img src="images/1 carousel.jpg" alt="Image 1">
+                <img src="images/2 carousel.jpg" alt="Image 2">
+                <img src="images/3 carousel.jpg" alt="Image 3">
+            </div>
+            <div class="carousel-controls-container">
+                <button class="carousel-control prev">❮</button>
+                <div class="carousel-buttons">
+                    <button class="carousel-button" data-slide="0"></button>
+                    <button class="carousel-button" data-slide="1"></button>
+                    <button class="carousel-button" data-slide="2"></button>
+                </div>
+                <button class="carousel-control next">❯</button>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Welcome to FiCo Cafe</h1>
+            <p>Experience the finest coffee in town.</p>
+            <a href="#menu" class="cta-button">Explore Our Menu</a>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Featured</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="images/coffee1.jpg" alt="Coffee">
+                    <h3>Vanilla Bean Frappe</h3>
+                    <p>Rich and aromatic espresso made from the finest beans.</p>
+                </div>
+                <div class="menu-item">
+                    <img src="images/coffee2.jpg" alt="Coffee">
+                    <h3>Mocha Latte</h3>
+                    <p>Smooth and creamy latte with a perfect balance of milk and coffee.</p>
+                </div>
+                <!-- Add more items as needed -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At FiCo Cafe, we believe in bringing people together over a great cup of coffee. Our beans are carefully selected and roasted to perfection to ensure the best taste experience.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="mailto:info@ficocafe.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#home">At Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <p>&copy; 2024 FiCo Cafe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+    <script>
+        // JavaScript for carousel functionality
+        const carousel = document.querySelector('.carousel-inner');
+        const prevBtn = document.querySelector('.carousel-control.prev');
+        const nextBtn = document.querySelector('.carousel-control.next');
+        const buttons = document.querySelectorAll('.carousel-button');
+        let index = 0;
+        const images = carousel.querySelectorAll('img');
+
+        function showImage(n) {
+            index = (n + images.length) % images.length;
+            carousel.style.transform = `translateX(${-index * 100}%)`;
+            updateButtons();
+        }
+
+        function updateButtons() {
+            buttons.forEach((button, i) => {
+                button.classList.toggle('active', i === index);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => showImage(index - 1));
+        nextBtn.addEventListener('click', () => showImage(index + 1));
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                showImage(Number(button.dataset.slide));
+            });
+        });
+
+        // Initialize the carousel
+        showImage(index);
+
+        window.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    header.classList.toggle('scrolled', window.scrollY > 50); // Adjust the scroll threshold as needed
+});
+
+    </script>
+</body>
+</html>
