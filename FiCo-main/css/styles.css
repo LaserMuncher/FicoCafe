@@ -432,3 +432,36 @@ footer {
     color: #fff;
     font-weight: bold;
 }
+
+.social-icons {
+    margin: 2rem 0;
+}
+
+.social-icons a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #555;
+}
+
+.map-container {
+    margin: 3rem 0;
+}
+
+.map-container img {
+    width: 80%;
+    max-width: 37.5rem;
+    height: auto;
+    border: 0.125rem solid #ccc;
+    cursor: pointer;
+}
+
+.details {
+    margin-top: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
