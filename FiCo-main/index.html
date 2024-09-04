@@ -15,10 +15,10 @@
             <div class="container-header-content">
                 <nav>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#menu">Menu</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="aboutUs.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -157,44 +157,7 @@
         </div>
     </footer>
 
-    <script src="js/scripts.js"></script>
-    <script>
-        // JavaScript for carousel functionality
-        const carousel = document.querySelector('.carousel-inner');
-        const prevBtn = document.querySelector('.carousel-control.prev');
-        const nextBtn = document.querySelector('.carousel-control.next');
-        const buttons = document.querySelectorAll('.carousel-button');
-        let index = 0;
-        const images = carousel.querySelectorAll('img');
-
-        function showImage(n) {
-            index = (n + images.length) % images.length;
-            carousel.style.transform = `translateX(${-index * 100}%)`;
-            updateButtons();
-        }
-
-        function updateButtons() {
-            buttons.forEach((button, i) => {
-                button.classList.toggle('active', i === index);
-            });
-        }
-
-        prevBtn.addEventListener('click', () => showImage(index - 1));
-        nextBtn.addEventListener('click', () => showImage(index + 1));
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                showImage(Number(button.dataset.slide));
-            });
-        });
-
-        // Initialize the carousel
-        showImage(index);
-
-        window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    header.classList.toggle('scrolled', window.scrollY > 50); // Adjust the scroll threshold as needed
-});
-
-    </script>
+    <script src="js/carousell.js"></script>
+    <script src="js/scroll.js"></script>
 </body>
 </html>
