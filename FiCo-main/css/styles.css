@@ -370,6 +370,7 @@ body {
 
 
 /* Contact Section */
+/* Contact Section */
 .contact {
     padding: 50px 20px;
     background-color: #ece1cf;
@@ -400,6 +401,82 @@ body {
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+}
+
+/* Social Media Icons */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Individual Icon Styles with Circular Border */
+.icon {
+    width: 5.625rem; /* Container size */
+    height: 5.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none; /* Remove underline */
+    border-radius: 50%; /* Make the icon container circular */
+    border: 2px solid var(--color); /* Add circular border with respective color */
+}
+
+/* Icon Styling with Larger Size and Respective Colors */
+.icon i {
+    font-size: 3rem; /* Increase the size of the logo */
+    color: var(--color); /* Use respective color */
+}
+
+/* Specific Colors for Each Icon */
+.icon.instagram {
+    --color: #d675ac; /* Instagram color */
+}
+
+.icon.facebook {
+    --color: #3b5998; /* Facebook color */
+}
+
+.icon.tiktok {
+    --color: #363636; /* TikTok color */
+}
+
+/* Hover Effect on Icon */
+.icon:hover > i {
+    transform: scale(1.2); /* Slightly enlarge the logo on hover */
+    color: #f1f1f1; /* Change the color on hover if desired */
+}
+
+/* Background Animation */
+.icon:before {
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(45deg);
+    background: var(--color); /* Background color matching the logo */
+}
+
+/* Hover State for Background Animation */
+.icon:hover:before {
+    animation: slide 0.7s forwards;
+}
+
+/* Keyframes for Slide Animation */
+@keyframes slide {
+    50% {
+        left: 10%;
+        top: -40%;
+    }
+    100% {
+        left: -15%;
+        top: -15%;
+    }
 }
 
 /* Footer */
