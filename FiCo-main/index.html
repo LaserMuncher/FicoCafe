@@ -6,6 +6,35 @@
     <title>FiCo Cafe</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Centering the hero content */
+        .hero-content {
+            text-align: center;
+            max-width: 800px; /* Adjust as needed */
+            margin: 0 auto;
+        }
+
+        /* Adjusting the paragraph text size */
+        .hero-content p {
+            font-size: 0.9em; 
+        }
+
+        /* Ensure the footer has relative positioning for the absolute child */
+        footer {
+            position: relative;
+            padding: 20px; /* Adjust as needed */
+        }
+
+        /* Position the copyright text at the bottom right */
+        .footer-copyright {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 0;
+            padding: 10px; /* Adjust as needed */
+            font-size: 0.8em; /* Adjust text size if needed */
+        }
+    </style>
 </head>
 <body>
 
@@ -28,7 +57,6 @@
             <div></div>
             <div></div>
         </div>
-        
     </header>
     
     <section id="home" class="hero">
@@ -50,7 +78,7 @@
         </div>
         <div class="hero-content">
             <h1>Welcome to FiCo Cafe</h1>
-            <p>Experience the finest coffee in town.</p>
+            <p>Welcome to Fico Café, where comfort meets flavor in the heart of Angeles city. Our cozy, rustic-inspired space offers the perfect escape from the hustle and bustle. With soft ambient lighting, comfortable seating, and a curated playlist of mellow tunes, Fico Café is designed to be your go-to spot for unwinding and enjoying the simple pleasures of life!</p>
             <a href="#menu" class="cta-button">Explore Our Menu</a>
         </div>
     </section>
@@ -104,16 +132,15 @@
         <div class="container">
             <div class="footer-links">
                 <ul>
-                    <li><a href="#menu">Menu</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#home">At Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="aboutUs.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-            <p>&copy; 2024 FiCo Cafe. All rights reserved.</p>
+            <p class="footer-copyright">&copy; 2024 FiCo Cafe. All rights reserved.</p>
         </div>
-    </footer>
+</footer>
 
     <script src="js/carousell.js"></script>
     <script src="js/scroll.js"></script>
