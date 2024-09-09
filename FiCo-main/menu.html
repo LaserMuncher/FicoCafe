@@ -5,47 +5,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu - FiCo Cafe</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
 </head>
 <body>
 </br></br></br>
-<header>
-    <div class="container-header">
-        <a href="#" class="logo"><img src="images/logo.jpg" alt="FiCo Cafe Logo"></a>
-        <div class="container-header-content">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="aboutUs.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+    <header>
+        <div class="container-header">
+            <a href="index.html" class="logo"><img src="images/logo.jpg" alt="FiCo Cafe Logo"></a>
+            <div class="container-header-content">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="aboutUs.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
-    </div>
-    <div class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-    
-</header>
+    </header>
 
-    <section id="menu" class="menu">
-        <div class="container">
-            <h2>Featured</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <img src="images/coffee1.jpg" alt="Coffee">
-                    <h3>Vanilla Bean Frappe</h3>
-                    <p>Rich and aromatic espresso made from the finest beans.</p>
+    <section class="menu-slider-wrapper">
+        <!-- Menu Section (Left) -->
+        <div class="menu-section">
+            <h2>FICO MENU</h2>
+            <div class="menu-filter">
+                <button onclick="filterMenu('all')">ALL</button>
+                <button onclick="filterMenu('coffee')">COFFEE</button>
+                <button onclick="filterMenu('non-coffee')">NON-COFFEE</button>
+                <button onclick="filterMenu('blended')">BLENDED</button>
+                <button onclick="filterMenu('seasonal')">SEASONAL SPECIAL</button>
+                <button onclick="filterMenu('exclusive')">DINE-IN EXCLUSIVE</button>
+            </div>
+            <div class="menu-grid">
+                <!-- Coffee Items -->
+                <div class="menu-card coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="Americano">
+                    <h3>Americano</h3>
+                    <p>P120</p>
                 </div>
-                <div class="menu-item">
-                    <img src="images/coffee2.jpg" alt="Coffee">
+                <div class="menu-card coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="Cappuccino">
+                    <h3>Cappuccino</h3>
+                    <p>P130</p>
+                </div>
+                <!-- Non-coffee Items -->
+                <div class="menu-card non-coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Hot Chocolate</h3>
+                    <p>P110</p>
+                </div>
+                <div class="menu-card non-coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Hot Chocolate</h3>
+                    <p>P110</p>
+                </div>
+                <!-- Blended Items -->
+                <div class="menu-card blended">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+
+                <div class="menu-card blended">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+                <div class="menu-card blended">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+
+                <div class="menu-card blended">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+                <div class="menu-card blended">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+
+                <div class="menu-card blended">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+                <!-- Seasonal Special Items -->
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+                <!-- Dine-in Exclusive -->
+                <div class="menu-card exclusive">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+
+                <div class="menu-card exclusive">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+                <div class="menu-card exclusive">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+
+                <div class="menu-card exclusive">
+                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
+                    <h3>Chocolate</h3>
+                    <p>P110</p>
+                </div>
+                <!-- Add more cards here -->
+            </div>
+        </div>
+
+        <!-- Best Seller Section (Right) -->
+        <div class="best-seller">
+            <h2>BEST SELLER!</h2>
+            <div class="slider">
+                <div class="best-seller-card">
+                    <img src="https://via.placeholder.com/300x350" alt="Caramel Macchiato">
+                    <h3>Caramel Macchiato</h3>
+                    <p>P120</p>
+                </div>
+                <div class="best-seller-card">
+                    <img src="https://via.placeholder.com/300x350" alt="Mocha Latte">
                     <h3>Mocha Latte</h3>
-                    <p>Smooth and creamy latte with a perfect balance of milk and coffee.</p>
+                    <p>P125</p>
                 </div>
-                <!-- Add more items as needed -->
+                <div class="best-seller-card">
+                    <img src="https://via.placeholder.com/300x350" alt="Spanish Latte">
+                    <h3>Spanish Latte</h3>
+                    <p>P130</p>
+                </div>
             </div>
         </div>
     </section>
@@ -66,6 +198,6 @@
     </footer>
 
     <script src="js/scroll.js"></script>
-    <script src="js/hamburger.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>
