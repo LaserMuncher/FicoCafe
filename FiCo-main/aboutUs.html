@@ -6,38 +6,42 @@
     <title>About Us - FiCo Cafe</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Centering the hero content */
-        .hero-content {
-            text-align: center;
-            max-width: 800px; /* Adjust as needed */
-            margin: 0 auto;
-        }
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Kollektif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+<style>
+ 
 
-        /* Adjusting the paragraph text size */
-        .hero-content p {
-            font-size: 0.9em; 
-        }
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .text-and-image {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-card {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+    .tagline {
+        font-size: 2.5rem;
+    }
+}
 
-        /* Ensure the footer has relative positioning for the absolute child */
-        footer {
-            position: relative;
-            padding: 20px; /* Adjust as needed */
-        }
+@media (max-width: 480px) {
+    .tagline {
+        font-size: 2rem;
+    }
+    .about-card h3 {
+        font-size: 1.25rem;
+    }
+    .about-card p {
+        font-size: 0.95rem;
+    }
+}
+</style>
 
-        /* Position the copyright text at the bottom right */
-        .footer-copyright {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            margin: 0;
-            padding: 10px; /* Adjust as needed */
-            font-size: 0.8em; /* Adjust text size if needed */
-        }
-    </style>
 </head>
 <body>
-</br></br></br>
+<br><br><br>
 <header>
     <div class="container-header">
         <a href="#" class="logo"><img src="images/logo.jpg" alt="FiCo Cafe Logo"></a>
@@ -57,49 +61,50 @@
         <div></div>
         <div></div>
     </div>
-    
 </header>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="image-card small">
-                    <img src="images/Coffee 4.jpg" alt="Coffee">
-                </div>
-                <div class="about-card">
-                    <h3>Our Story</h3>
-                    <p>Fico Cafe is a locally-owned coffee boutique designed to capture the unique personality and charm of Angeles City.</p>
-                </div>
-                <div class="about-card">
-                    <h3>Our Atmosphere</h3>
-                    <p>The café combines exceptional offerings with outstanding customer service, creating a welcoming atmosphere that feels both intimate and vibrant.</p>
-                </div>
-                <div class="image-card right-image">
-                    <img src="images/Customers.jpg" alt="Customers">
-                </div>
-                <div class="about-card">
-                    <h3>Our Space</h3>
-                    <p>Guests can enjoy free Wi-Fi and comfortable indoor seating amidst a jazz-infused setting that enhances the cafe's distinctive ambiance.</p>
-                </div>
+<section id="about" class="about">
+    <div class="container">
+        <div class="text-and-image">
+            <div class="image-content">
+                <img src="images/Customers.jpg" alt="Customers" style="max-width: 45rem;">
+            </div>
+            <div class="image-content">
+                <img src="images/Big text.png" alt="FiCo Cafe" style="max-width: 28.50rem;">
             </div>
         </div>
-    </section>
+        <div class="text-content">
+            <div class="about-card">
+                <h3>Our Story</h3>
+                <p>Fico Cafe is a locally-owned coffee boutique designed to capture the unique personality and charm of Angeles City.</p>
+            </div>
+            <div class="about-card">
+                <h3>Our Atmosphere</h3>
+                <p>The café combines exceptional offerings with outstanding customer service, creating a welcoming atmosphere that feels both intimate and vibrant.</p>
+            </div>
+            <div class="about-card">
+                <h3>Our Space</h3>
+                <p>Guests can enjoy free Wi-Fi and comfortable indoor seating amidst a jazz-infused setting that enhances the cafe's distinctive ambiance. Fico Cafe’s interior is thoughtfully decorated to reflect the rich heritage of the area, providing a cozy and stylish environment perfect for relaxing or working.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <div class="container">
-            <div class="footer-links">
-                <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="menu.html">Menu</a></li>
-                        <li><a href="aboutUs.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <p class="footer-copyright">&copy; 2024 FiCo Cafe. All rights reserved.</p>
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
+        <p class="footer-copyright">© 2024 FiCo Cafe. All rights reserved.</p>
+    </div>
 </footer>
 
-    <script src="js/scroll.js"></script>
-    <script src="js/hamburger.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/hamburger.js"></script>
 </body>
 </html>
