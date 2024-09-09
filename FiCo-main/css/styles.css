@@ -261,7 +261,7 @@ header.scrolled nav ul li a {
     border-radius: 10px;
 }
 
-/*About Section*/
+/* About Section */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -271,106 +271,172 @@ body {
 
 .about {
     position: relative;
-    padding: 2.5rem 1.25rem;
+    padding: 0; /* Remove padding to ensure the heading stays at the top */
     background-color: #fff;
 }
 
-.about::before {
-    content: ""; /* Required for pseudo-element */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("images/overlay.jpg") no-repeat center center; /* Use your transparent pattern image */
-    background-size: cover; /* Make sure the pattern covers the entire section */
-    opacity: 0.2; /* Adjust transparency */
-    pointer-events: none; /* Ensure it doesn’t block interactions */
-    z-index: 1; /* Place it above the background color but below other content */
-}
-
 .container {
-    max-width: 75rem;
+    max-width: 70rem; /* Adjusted max-width */
     margin: 0 auto;
+    padding: 2rem 1rem; /* Add padding around the container */
+    position: relative; /* Ensure the big text is positioned relative to the container */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
 }
 
-.about-content {
+/* Top Section */
+.text-and-image {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between;
     position: relative;
-    z-index: 2; /* Ensure the content is above the overlay */
-    overflow: hidden; /* Clearfix to handle floating elements */
-    margin-top: 1.25rem;
 }
 
-.image-card {
-    background-color: #fafafa;
-    padding: 1.25rem;
-    border-radius: 0.75rem; /* Curvature for the box */
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    text-align: center;
-    box-sizing: border-box; /* Include padding and border in the element's width and height */
+/* Image Content */
+.image-content {
+    flex: 0 0 auto; /* Prevent the image from growing or shrinking */
+    margin-right: 2rem; /* Add space to the right of the image */
 }
 
-.image-card.small {
-    float: left; /* Float the image to the left */
-    width: calc(30% - 1.25rem); /* Smaller width for the first image */
-    margin: 0.625rem 13.125rem 1.875rem 0.625rem; /* Space around the card */
-}
-
-.image-card.right-image {
-    float: right; /* Float the new image card to the right */
-    width: calc(40% - 1.25rem); /* Adjust width considering margins */
-    margin: 2.5rem 0.625rem 0.625rem 3.125rem; /* Space around the card */
-}
-
-.image-card img {
-    width: 100%; /* Fit image to the width of the card */
+.image-content img {
+    width: 100%; /* Make the image responsive */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 0.75rem; /* Match the curvature of the card */
+    border-radius: 0.5rem; /* Optional: Rounded corners */
+}
+
+/* Specific sizes for each image */
+.image-content img:first-child {
+    max-width: 15rem; /* Set a maximum width for the first image */
+}
+
+.image-content img:last-child {
+    max-width: 25rem; /* Set a maximum width for the second image */
+}
+
+
+/* Three-column text layout */
+.text-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* Space between columns */
+    margin-top: 2rem; /* Space above the text content */
 }
 
 .about-card {
-    float: left; /* Float the cards to the left */
-    width: calc(50% - 1.25rem); /* Fit width to allow two items per row, considering margins */
-    margin: 0.625rem; /* Space around the card */
+    flex: 1 1 calc(33.333% - 1rem); /* Three columns with space between */
     background-color: #fafafa;
-    padding: 1.25rem;
-    border-radius: 0.75rem; /* Curvature for the box */
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 1rem; /* Padding inside the card */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
     text-align: justify;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem; /* Space below each card */
 }
 
 .about-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.9375rem;
+    font-size: 1.25rem; /* Font size for the heading */
+    margin-bottom: 1rem; /* Space below the heading */
     color: #333;
 }
 
 .about-card p {
     color: #666;
+    margin-bottom: 1rem; /* Space below each paragraph */
 }
 
 .about-card:hover {
-    transform: translateY(-0.3125rem); /* Smooth upward hover effect */
-    box-shadow: 0 0.375rem 0.75rem rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    transform: translateY(-0.25rem); /* Smooth upward hover effect */
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
 @media screen and (max-width: 48rem) {
-    .image-card,
+    .text-content {
+        flex-direction: column; /* Stack columns vertically on small screens */
+    }
+
     .about-card {
-        width: 100%; /* Full width on small screens */
-        margin: 0.625rem 0; /* Space above and below on small screens */
-        float: none; /* Remove float on small screens */
+        flex: 1 1 100%; /* Full width on small screens */
     }
 }
 
-.about p {
-    font-size: 1.2rem;
+/* Add keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: Add a slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initially hide the images */
+.image-content img {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Stagger the animations */
+.image-content img:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.image-content img:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+/* Initially hide the columns */
+.about-card {
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-name: fadeIn;
+}
+
+/* Apply delay to columns after images fade in */
+.about-card:nth-child(1) {
+    animation-delay: 1.2s; /* Delay after the last image */
+}
+
+.about-card:nth-child(2) {
+    animation-delay: 1.4s; /* Delay after the last image */
+}
+
+.about-card:nth-child(3) {
+    animation-delay: 1.6s; /* Delay after the last image */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .text-and-image {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-card {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+    .tagline {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tagline {
+        font-size: 2rem;
+    }
+    .about-card h3 {
+        font-size: 1.25rem;
+    }
+    .about-card p {
+        font-size: 0.95rem;
+    }
 }
 
 
-/* Contact Section */
 /* Contact Section */
 .contact {
     padding: 50px 20px;
