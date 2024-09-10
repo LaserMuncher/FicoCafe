@@ -3,45 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - FiCo Cafe</title>
+    <title>Contact - FiCo Cafe</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Kollektif&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-<style>
- 
-
-/* Media queries for mobile responsiveness */
-@media (max-width: 768px) {
-    .text-and-image {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-card {
-        flex-basis: 100%;
-        margin: 10px 0;
-    }
-    .tagline {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .tagline {
-        font-size: 2rem;
-    }
-    .about-card h3 {
-        font-size: 1.25rem;
-    }
-    .about-card p {
-        font-size: 0.95rem;
-    }
-}
-</style>
 
 </head>
 <body>
-<br><br><br>
+</br></br></br>
 <header>
     <div class="container-header">
         <a href="#" class="logo"><img src="images/logo.jpg" alt="FiCo Cafe Logo"></a>
@@ -63,28 +31,57 @@
     </div>
 </header>
 
-<section id="about" class="about">
-    <div class="container">
-        <div class="text-and-image">
-            <div class="image-content">
-                <img src="images/Customers.jpg" alt="Customers" style="max-width: 45rem;">
-            </div>
-            <div class="image-content">
-                <img src="images/Big text.png" alt="FiCo Cafe" style="max-width: 28.50rem;">
-            </div>
+<section id="contact" class="contact">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center;">
+        <h1 style="margin-bottom: 2rem; font-size: 2.5rem;">Get in touch with us</h1>
+
+        <!-- Social Media Icons -->
+        <div class="wrapper" style="margin-bottom: 2rem;">
+            <a href="https://www.instagram.com/fi.co.cafe/" class="icon instagram" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/ficocafe/" class="icon facebook" target="_blank">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.tiktok.com/@ficocafe" class="icon tiktok" target="_blank">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
         </div>
-        <div class="text-content">
-            <div class="about-card">
-                <h3>Our Story</h3>
-                <p>Fico Cafe is a locally-owned coffee boutique designed to capture the unique personality and charm of Angeles City.</p>
+
+        <!-- Flexbox Layout for Map and Contact Form -->
+        <div class="contact-content" style="display: flex; justify-content: space-between; width: 100%; max-width: 1000px;">
+            <!-- Map Location -->
+            <div class="map-container" style="flex: 1; margin-right: 2rem;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.6566686928763!2d120.589182!3d15.1337668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f3480958822d%3A0xd3052ee5e476e319!2sFI.CO%20Cafe!5e0!3m2!1sen!2sph!4v1637251599220!5m2!1sen!2sph" 
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+                    <!-- Contact Details -->
+                <div class="details" style="margin-top: 1rem;">
+                    <p>Location: 2F-A Gloans Annex, Sto Rosario St., Angeles City</p>
+                    <p>Contact Number: 09190640547</p>
+                </div>
             </div>
-            <div class="about-card">
-                <h3>Our Atmosphere</h3>
-                <p>The café combines exceptional offerings with outstanding customer service, creating a welcoming atmosphere that feels both intimate and vibrant.</p>
-            </div>
-            <div class="about-card">
-                <h3>Our Space</h3>
-                <p>Guests can enjoy free Wi-Fi and comfortable indoor seating amidst a jazz-infused setting that enhances the cafe's distinctive ambiance. Fico Cafe’s interior is thoughtfully decorated to reflect the rich heritage of the area, providing a cozy and stylish environment perfect for relaxing or working.</p>
+
+            <!-- Contact Form -->
+            <div class="contact-form" style="flex: 1; margin-left: 2rem;">
+                <h2 style="margin-bottom: 2rem;">Contact Us</h2>
+                <form action="mailto:info@ficocafe.com" method="post" enctype="text/plain" style="width: 100%; max-width: 500px;">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; margin-bottom: 1rem;">
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; margin-bottom: 1rem;">
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required style="width: 100%; margin-bottom: 1rem;"></textarea>
+                    
+                    <button type="submit" style="width: 100%;">Send</button>
+                </form>
             </div>
         </div>
     </div>
@@ -100,11 +97,11 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-        <p class="footer-copyright">© 2024 FiCo Cafe. All rights reserved.</p>
+        <p class="footer-copyright">&copy; 2024 FiCo Cafe. All rights reserved.</p>
     </div>
 </footer>
 
-<script src="js/scroll.js"></script>
-<script src="js/hamburger.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/hamburger.js"></script>
 </body>
 </html>

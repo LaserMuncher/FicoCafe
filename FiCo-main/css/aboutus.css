@@ -1,0 +1,218 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+section.contact {
+    min-height: 100vh;
+}
+
+/* Centering the hero content */
+.hero-content {
+    text-align: center;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+/* Adjusting the paragraph text size */
+.hero-content p {
+    font-size: 0.9em; 
+}
+
+/* Ensure the footer has relative positioning for the absolute child */
+footer {
+    position: relative;
+    padding: 20px; /* Adjust as needed */
+    margin-top: auto; /* Ensure footer sticks to the bottom */
+}
+
+/* Position the copyright text at the bottom right */
+.footer-copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px; /* Adjust as needed */
+    font-size: 0.8em; /* Adjust text size if needed */
+}
+
+
+
+/* About Section */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.about {
+    position: relative;
+    padding: 0; /* Remove padding to ensure the heading stays at the top */
+    background-color: #fff;
+}
+
+.container {
+    max-width: 70rem; /* Adjusted max-width */
+    margin: 0 auto;
+    padding: 2rem 1rem; /* Add padding around the container */
+    position: relative; /* Ensure the big text is positioned relative to the container */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+/* Top Section */
+.text-and-image {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between;
+    position: relative;
+}
+
+/* Image Content */
+.image-content {
+    flex: 0 0 auto; /* Prevent the image from growing or shrinking */
+    margin-right: 2rem; /* Add space to the right of the image */
+}
+
+.image-content img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0.5rem; /* Optional: Rounded corners */
+}
+
+/* Specific sizes for each image */
+.image-content img:first-child {
+    max-width: 15rem; /* Set a maximum width for the first image */
+}
+
+.image-content img:last-child {
+    max-width: 25rem; /* Set a maximum width for the second image */
+}
+
+
+/* Three-column text layout */
+.text-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* Space between columns */
+    margin-top: 2rem; /* Space above the text content */
+}
+
+.about-card {
+    flex: 1 1 calc(33.333% - 1rem); /* Three columns with space between */
+    background-color: #fafafa;
+    padding: 1rem; /* Padding inside the card */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    box-sizing: border-box;
+    margin-bottom: 1.5rem; /* Space below each card */
+}
+
+.about-card h3 {
+    font-size: 1.25rem; /* Font size for the heading */
+    margin-bottom: 1rem; /* Space below the heading */
+    color: #333;
+}
+
+.about-card p {
+    color: #666;
+    margin-bottom: 1rem; /* Space below each paragraph */
+}
+
+.about-card:hover {
+    transform: translateY(-0.25rem); /* Smooth upward hover effect */
+    box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+@media screen and (max-width: 48rem) {
+    .text-content {
+        flex-direction: column; /* Stack columns vertically on small screens */
+    }
+
+    .about-card {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+}
+
+/* Add keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: Add a slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initially hide the images */
+.image-content img {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Stagger the animations */
+.image-content img:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.image-content img:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+/* Initially hide the columns */
+.about-card {
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-name: fadeIn;
+}
+
+/* Apply delay to columns after images fade in */
+.about-card:nth-child(1) {
+    animation-delay: 1.2s; /* Delay after the last image */
+}
+
+.about-card:nth-child(2) {
+    animation-delay: 1.4s; /* Delay after the last image */
+}
+
+.about-card:nth-child(3) {
+    animation-delay: 1.6s; /* Delay after the last image */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .text-and-image {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-card {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
+    .tagline {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tagline {
+        font-size: 2rem;
+    }
+    .about-card h3 {
+        font-size: 1.25rem;
+    }
+    .about-card p {
+        font-size: 0.95rem;
+    }
+}
+

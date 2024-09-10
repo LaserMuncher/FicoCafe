@@ -1,0 +1,150 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+section.contact {
+    min-height: 100vh;
+}
+
+/* Centering the hero content */
+.hero-content {
+    text-align: center;
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+/* Adjusting the paragraph text size */
+.hero-content p {
+    font-size: 0.9em; 
+}
+
+/* Ensure the footer has relative positioning for the absolute child */
+footer {
+    position: relative;
+    padding: 20px; /* Adjust as needed */
+    margin-top: auto; /* Ensure footer sticks to the bottom */
+}
+
+/* Position the copyright text at the bottom right */
+.footer-copyright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px; /* Adjust as needed */
+    font-size: 0.8em; /* Adjust text size if needed */
+}
+
+
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background-color: #ece1cf;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.contact button {
+    background-color: #6f4f28;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Social Media Icons */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Individual Icon Styles with Circular Border */
+.icon {
+    width: 5.625rem; /* Container size */
+    height: 5.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none; /* Remove underline */
+    border-radius: 50%; /* Make the icon container circular */
+    border: 2px solid var(--color); /* Add circular border with respective color */
+}
+
+/* Icon Styling with Larger Size and Respective Colors */
+.icon i {
+    font-size: 3rem; /* Increase the size of the logo */
+    color: var(--color); /* Use respective color */
+}
+
+/* Specific Colors for Each Icon */
+.icon.instagram {
+    --color: #d675ac; /* Instagram color */
+}
+
+.icon.facebook {
+    --color: #3b5998; /* Facebook color */
+}
+
+.icon.tiktok {
+    --color: #363636; /* TikTok color */
+}
+
+/* Hover Effect on Icon */
+.icon:hover > i {
+    transform: scale(1.2); /* Slightly enlarge the logo on hover */
+    color: #f1f1f1; /* Change the color on hover if desired */
+}
+
+/* Background Animation */
+.icon:before {
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(45deg);
+    background: var(--color); /* Background color matching the logo */
+}
+
+/* Hover State for Background Animation */
+.icon:hover:before {
+    animation: slide 0.7s forwards;
+}
+
+/* Keyframes for Slide Animation */
+@keyframes slide {
+    50% {
+        left: 10%;
+        top: -40%;
+    }
+    100% {
+        left: -15%;
+        top: -15%;
+    }
+}
