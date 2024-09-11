@@ -139,7 +139,8 @@ nav ul li a:hover {
     object-fit: cover;
 }
 .carousel-inner video {
-    margin-top: -10rem;
+    width: 100%;
+    object-fit: cover;
 }
 
 .carousel-controls-container {
@@ -432,5 +433,14 @@ footer {
     .cta-button {
         font-size: 1rem;
         padding: 0.5rem 1rem;
+    }
+    .carousel-inner img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .carousel-inner video {
+        width: 100%;
+        object-fit: cover;
     }
 }
