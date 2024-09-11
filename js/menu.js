@@ -1,3 +1,11 @@
+// Add event listeners to buttons
+document.querySelectorAll('.menu-filter button').forEach(button => {
+    button.addEventListener('click', function () {
+        const category = this.getAttribute('data-category');
+        filterMenu(category);
+    });
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     // Initialize the slider using slick.js
     $('.slider').slick({
@@ -10,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         autoplaySpeed: 2000
     });
 });
-// Filtering menu items based on category
+
 function filterMenu(category) {
     const allItems = document.querySelectorAll('.menu-card');
     const buttons = document.querySelectorAll('.menu-filter button');
@@ -33,7 +41,7 @@ function filterMenu(category) {
     buttons.forEach(button => button.classList.remove('selected'));
 
     // Add selected class to the clicked button
-    const selectedButton = Array.from(buttons).find(button => button.textContent.toLowerCase() === category.toLowerCase() || category === 'all' && button.textContent.toLowerCase() === 'all');
+    const selectedButton = Array.from(buttons).find(button => button.getAttribute('data-category') === category);
     if (selectedButton) {
         selectedButton.classList.add('selected');
 
@@ -51,3 +59,4 @@ function filterMenu(category) {
         }
     }
 }
+

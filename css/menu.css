@@ -1,11 +1,23 @@
+/* Menu Slider Wrapper */
 .menu-slider-wrapper {
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    gap: 20px; /* Adds space between the menu and slider */
-    background-color: #ece1cf;
+    gap: 20px; 
+    background-color:  #f0dab6;
 }
 
+.title-menu {
+    margin-top: 2rem;
+    background-color:  #f0dab6;
+    text-align: center;
+    font-size: 1.75rem; 
+    font-weight: bold; 
+    padding: 0.1rem;
+    color: #333; 
+}
+
+/* Menu Section */
 .menu-section {
     flex: 1;
     padding-right: 20px;
@@ -13,71 +25,100 @@
     height: 100vh;
 }
 
+/* Filter Buttons */
 .menu-filter {
     display: flex;
     justify-content: flex-start;
     gap: 10px;
-    overflow-x: auto; /* Enable horizontal scrolling for the filter buttons */
+    overflow-x: auto; 
     padding-bottom: 10px;
 }
 
+.menu-filter {
+    display: flex;
+    justify-content: flex-start;
+    gap: 0.625rem; 
+    overflow-x: auto; 
+    padding-bottom: 0.625rem;
+    scrollbar-width: thin; 
+    scrollbar-color: #d4c6b6 transparent; 
+}
+
+.menu-filter::-webkit-scrollbar {
+    height: 0.625rem;
+}
+
+.menu-filter::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.menu-filter::-webkit-scrollbar-thumb {
+    background-color: #d4c6b6; 
+    border-radius: 10px;
+    border: 0px none; 
+}
+
 .menu-filter button {
-    padding: 8px 16px;
+    margin: 0.125rem;
+    padding: 0.5rem 1rem;
     border: none;
     background-color: #d4c6b6;
     color: white;
     font-weight: bold;
     cursor: pointer;
-    flex-shrink: 0; /* Ensures the button doesn’t shrink when scrolling */
+    flex-shrink: 0;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-.menu-filter button {
-    padding: 8px 16px;
-    border: none;
-    background-color: #d4c6b6;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    flex-shrink: 0; /* Ensures the button doesn’t shrink when scrolling */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
-    border-radius: 4px; /* Rounded corners for buttons */
-}
-
-/* Hover effect */
 .menu-filter button:hover {
-    background-color: #b09b8c; /* Darker background on hover */
-    color: #fff; /* Text color on hover */
-    transform: scale(1.05); /* Slightly enlarge the button */
+    background-color: #bfae9e; 
+    transform: scale(1.05); 
 }
 
-/* Focus effect for accessibility */
+.menu-filter button.selected {
+    background-color: #bfae9e;
+    color: #333;
+}
+
 .menu-filter button:focus {
-    outline: 2px solid #fff; /* Visible focus indicator */
-    outline-offset: 2px;
+    outline: 1px solid #000; 
+    outline-offset: 1px;
 }
 
+.menu-filter button:active {
+    transform: scale(0.98); 
+}
+
+/* Menu Grid */
 .menu-grid {
     display: flex;
-    flex-wrap: wrap;
-    overflow: hidden; /* Default to no scroll */
+    flex-wrap: nowrap;
+    overflow-x: auto; 
+    white-space: nowrap;
+    max-height: 80vh; 
+    padding-bottom: 10px;
 }
 
-/* Menu card styling */
 .menu-card {
+    display: inline-block;
+    flex: none;
+    width: 12.5rem;
+    margin: 0.625rem; 
     background-color: white;
-    width: 200px;
-    margin: 10px;
-    padding: 10px;
+    padding: 0.625rem; 
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem; 
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.2); 
     transition: transform 0.2s;
 }
 
 .menu-card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
+    width: 15.75rem;
+    height: 18.875rem;
+    object-fit: cover;
+    border-radius: 0.5rem; 
+    margin-bottom: 0.625rem; 
 }
 
 .menu-card:hover {
@@ -113,12 +154,20 @@
     padding: 15px;
 }
 
+.best-seller-card img {
+    width: 18.75rem;
+    height: 21.875rem;
+    object-fit: cover;
+    border-radius: 0.5rem; 
+    margin-bottom: 0.625rem; 
+}
+
 .cropped-slider .best-seller-card img {
-    width: 200px;
-    height: 200px; /* Adjust the height for cropping */
-    object-fit: cover; /* Ensures cropped and centered image */
-    border-radius: 8px;
-    margin-bottom: 10px;
+    width: 12.5rem;
+    height: 12.5rem;
+    object-fit: cover; 
+    border-radius: 0.5rem; 
+    margin-bottom: 0.625rem; 
 }
 
 .cropped-slider {
@@ -131,7 +180,6 @@
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-
 /* Responsive Styles */
 @media (max-width: 768px) {
     .menu-slider-wrapper {
@@ -147,34 +195,54 @@
         margin-top: 30px;
     }
 
-    /* Scrollable menu grid for mobile */
+    /* Mobile Menu Grid */
     .menu-grid {
-        flex-direction: row; /* Arrange items in a horizontal row */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        white-space: nowrap; /* Prevent line breaks for horizontal scroll */
-        max-height: 80vh; /* Limit height to enable scrolling */
-        padding-bottom: 10px; /* Padding to ensure scroll bar is visible */
+        flex-direction: row;
+        overflow-x: auto; 
+        white-space: nowrap; 
+        max-height: 80vh;
     }
 
     .menu-card {
-        display: inline-block; /* Display items inline for horizontal layout */
-        flex: none; /* Prevent items from growing or shrinking */
-        width: 200px; /* Set a fixed width for the cards */
-        margin: 10px; /* Space between items */
+        width: 60vw; 
+        margin: 0.5rem;
+    }
+
+    .menu-card img {
+        width: 100%;
+        height: auto; 
+    }
+    .menu-filter {
+        gap: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .menu-filter button {
+        padding: 0.4rem 0.8rem; 
+        font-size: 0.875rem; 
     }
 }
 
-/* For desktop and larger screens (vertical scrolling) */
+/* Desktop and Larger Screens */
 @media (min-width: 769px) {
     .menu-grid {
-        flex-direction: row; /* Arrange items in rows */
-        overflow-y: auto; /* Enable vertical scrolling */
-        max-height: 80vh; /* Adjust height as needed */
-        padding-right: 10px; /* Padding to ensure scroll bar is visible */
+        flex-wrap: wrap; 
+        overflow-y: auto; 
+        max-height: 80vh; 
+        padding-right: 10px;
     }
 
     .menu-card {
-        flex: 1 1 200px; /* Allow items to grow and shrink */
-        margin: 10px; /* Space between items */
+        flex: 1 1 200px;
+        margin: 10px; 
+    }
+
+    .menu-filter {
+        gap: 0.625rem; /* Larger gap on desktop */
+    }
+
+    .menu-filter button {
+        padding: 0.6rem 1.2rem; /* Larger padding for desktop */
+        font-size: 1rem; /* Regular font size */
     }
 }

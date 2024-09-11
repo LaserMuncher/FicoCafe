@@ -26,141 +26,296 @@
                 </ul>
             </nav>
         </div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
-    <div class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</header>
+    </header>
 
+    <div class="title-menu">
+        <h2>FICO MENU</h2>
+    </div>
     <section class="menu-slider-wrapper">
-        <!-- Menu Section (Left) -->
         <div class="menu-section">
-            <h2>FICO MENU</h2>
             <div class="menu-filter">
-                <button onclick="filterMenu('all')">ALL</button>
-                <button onclick="filterMenu('coffee')">COFFEE</button>
-                <button onclick="filterMenu('non-coffee')">NON-COFFEE</button>
-                <button onclick="filterMenu('blended')">BLENDED</button>
-                <button onclick="filterMenu('seasonal')">SEASONAL SPECIAL</button>
-                <button onclick="filterMenu('exclusive')">DINE-IN EXCLUSIVE</button>
+                <button data-category="all">ALL</button>
+                <button data-category="coffee">COFFEE</button>
+                <button data-category="non-coffee">NON-COFFEE</button>
+                <button data-category="blended">BLENDED</button>
+                <button data-category="seasonal">SEASONAL SPECIAL</button>
+                <button data-category="exclusive">DINE-IN EXCLUSIVE</button>
             </div>
             <div class="menu-grid">
                 <!-- Coffee Items -->
                 <div class="menu-card coffee">
                     <img src="https://via.placeholder.com/200x250" alt="Americano">
                     <h3>Americano</h3>
-                    <p>P120</p>
+                    <p>P109.00</p>
                 </div>
+
                 <div class="menu-card coffee">
                     <img src="https://via.placeholder.com/200x250" alt="Cappuccino">
                     <h3>Cappuccino</h3>
-                    <p>P130</p>
+                    <p>P159.00</p>
                 </div>
+
+                <div class="menu-card coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="Caramel Machiato">
+                    <h3>Caramel Machiato</h3>
+                    <p>P189.00</p>
+                </div>
+
+                <div class="menu-card coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="Mocha Latte">
+                    <h3>Mocha Latte</h3>
+                    <p>P189.00</p>
+                </div>
+
+                <div class="menu-card coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="Mocha Latte">
+                    <h3>Mocha Latte</h3>
+                    <p>P189.00</p>
+                </div>
+
+                <div class="menu-card coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="Sea Salt Latte">
+                    <h3>Sea Salt Latte</h3>
+                    <p>P189.00</p>
+                </div>
+
+                <div class="menu-card coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="Spanish Latte">
+                    <h3>Spanish Latte</h3>
+                    <p>P179.00</p>
+                </div>
+
+                <div class="menu-card coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="White Mocha">
+                    <h3>White Mocha</h3>
+                    <p>P189.00</p>
+                </div>
+
                 <!-- Non-coffee Items -->
                 <div class="menu-card non-coffee">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Hot Chocolate</h3>
-                    <p>P110</p>
+                    <img src="https://via.placeholder.com/200x250" alt="Boba Burst">
+                    <h3>Boba Burst</h3>
+                    <p>P119.00</p>
                 </div>
+
                 <div class="menu-card non-coffee">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Hot Chocolate</h3>
-                    <p>P110</p>
+                    <img src="https://via.placeholder.com/200x250" alt="Pure Matcha">
+                    <h3>Pure Matcha</h3>
+                    <p>P189.00</p>
                 </div>
+
+                <div class="menu-card non-coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="Serene Sunrise">
+                    <h3>Serene Sunrise</h3>
+                    <p>P119.00</p>
+                </div>
+
+                <div class="menu-card non-coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="Sunset Zettler">
+                    <h3>Sunset Zettler</h3>
+                    <p>P119.00</p>
+                </div>
+
+                <div class="menu-card non-coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="Strawberry Matcha">
+                    <h3>Strawberry Matcha</h3>
+                    <p>P189.00</p>
+                </div>
+
+                <div class="menu-card non-coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="SAMPLE">
+                    <h3>SAMPLE</h3>
+                    <p>P189.00</p>
+                </div>
+
+                <div class="menu-card non-coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="SAMPLE">
+                    <h3>SAMPLE</h3>
+                    <p>P189.00</p>
+                </div>
+
+                <div class="menu-card non-coffee">
+                    <img src="https://via.placeholder.com/200x250" alt="SAMPLE">
+                    <h3>SAMPLE</h3>
+                    <p>P189.00</p>
+                </div>
+
                 <!-- Blended Items -->
                 <div class="menu-card blended">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
+                    <img src="https://via.placeholder.com/200x250" alt="Choco Chip & Cream">
+                    <h3>Choco Chip & Cream</h3>
+                    <p>P189.00</p>
                 </div>
 
                 <div class="menu-card blended">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
-                </div>
-                <div class="menu-card blended">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
+                    <img src="https://via.placeholder.com/200x250" alt="Coffee Jelly">
+                    <h3>Coffee Jelly</h3>
+                    <p>P189.00</p>
                 </div>
 
                 <div class="menu-card blended">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
-                </div>
-                <div class="menu-card blended">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
+                    <img src="https://via.placeholder.com/200x250" alt="Cookies & Cream">
+                    <h3>Cookies & Cream</h3>
+                    <p>P189.00</p>
                 </div>
 
                 <div class="menu-card blended">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
+                    <img src="https://via.placeholder.com/200x250" alt="Java Chip">
+                    <h3>Java Chip</h3>
+                    <p>P189.00</p>
                 </div>
+
+                <div class="menu-card blended">
+                    <img src="https://via.placeholder.com/200x250" alt="Matcha & Cream">
+                    <h3>Matcha & Cream</h3>
+                    <p>P189.00</p>
+                </div>
+
+                <div class="menu-card blended">
+                    <img src="https://via.placeholder.com/200x250" alt="Strawberries & Cream">
+                    <h3>Strawberries & Cream</h3>
+                    <p>P189.00</p>
+                </div>
+
+                <div class="menu-card blended">
+                    <img src="https://via.placeholder.com/200x250" alt="Vanilla Bean">
+                    <h3>Vanilla Bean</h3>
+                    <p>P189.00</p>
+                </div>
+
+                <div class="menu-card blended">
+                    <img src="https://via.placeholder.com/200x250" alt="Vanilla Bean">
+                    <h3>Vanilla Bean</h3>
+                    <p>P189.00</p>
+                </div>
+
                 <!-- Seasonal Special Items -->
                 <div class="menu-card seasonal">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
+                    <img src="https://via.placeholder.com/200x250" alt="Baked Mac">
+                    <h3>Baked Mac</h3>
+                    <p>P155.00</p>
                 </div>
 
                 <div class="menu-card seasonal">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
-                </div>
-                <div class="menu-card seasonal">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
+                    <img src="https://via.placeholder.com/200x250" alt="Baked Lasagna">
+                    <h3>Baked Lasagna</h3>
+                    <p>P180.00</p>
                 </div>
 
                 <div class="menu-card seasonal">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
-                </div>
-                <div class="menu-card seasonal">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
+                    <img src="https://via.placeholder.com/200x250" alt="Baked Mac">
+                    <h3>Baked Mac</h3>
+                    <p>P155.00</p>
                 </div>
 
                 <div class="menu-card seasonal">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
+                    <img src="https://via.placeholder.com/200x250" alt="Baked Lasagna">
+                    <h3>Baked Lasagna</h3>
+                    <p>P180.00</p>
                 </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Baked Mac">
+                    <h3>Baked Mac</h3>
+                    <p>P155.00</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Baked Lasagna">
+                    <h3>Baked Lasagna</h3>
+                    <p>P180.00</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Baked Mac">
+                    <h3>Baked Mac</h3>
+                    <p>P155.00</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Baked Lasagna">
+                    <h3>Baked Lasagna</h3>
+                    <p>P180.00</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Cookies">
+                    <h3>Cookies</h3>
+                    <p>P65.00</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Croffle">
+                    <h3>Croffle</h3>
+                    <p>P118.00</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Nachos">
+                    <h3>Nachos</h3>
+                    <p>P120.00</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Overnight Oats">
+                    <h3>Overnight Oats</h3>
+                    <p>P119.00</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Sandwich">
+                    <h3>Sandwich</h3>
+                    <p>P65.00</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Waffle">
+                    <h3>Waffle</h3>
+                    <p>P99.00</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Sandwich">
+                    <h3>SAMPLE</h3>
+                    <p>P65.00</p>
+                </div>
+
+                <div class="menu-card seasonal">
+                    <img src="https://via.placeholder.com/200x250" alt="Waffle">
+                    <h3>SAMPLE</h3>
+                    <p>P99.00</p>
+                </div>
+
                 <!-- Dine-in Exclusive -->
                 <div class="menu-card exclusive">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
+                    <img src="https://via.placeholder.com/200x250" alt="Affogato">
+                    <h3>Affogato</h3>
+                    <p>P159.00</p>
                 </div>
 
                 <div class="menu-card exclusive">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
-                </div>
-                <div class="menu-card exclusive">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
+                    <img src="https://via.placeholder.com/200x250" alt="House Blend Iced Tea">
+                    <h3>House Blend Iced Tea</h3>
+                    <p>P119.00</p>
                 </div>
 
                 <div class="menu-card exclusive">
-                    <img src="https://via.placeholder.com/200x250" alt="Hot Chocolate">
-                    <h3>Chocolate</h3>
-                    <p>P110</p>
+                    <img src="https://via.placeholder.com/200x250" alt="Peachpresso">
+                    <h3>Peachpresso</h3>
+                    <p>P119.00</p>
                 </div>
-                <!-- Add more cards here -->
+
+                <div class="menu-card exclusive">
+                    <img src="https://via.placeholder.com/200x250" alt="Peachpresso">
+                    <h3>SAMPLE</h3>
+                    <p>P119.00</p>
+                </div>
             </div>
         </div>
 
@@ -169,17 +324,17 @@
             <h2>BEST SELLER!</h2>
             <div class="slider">
                 <div class="best-seller-card">
-                    <img src="https://via.placeholder.com/300x350" alt="Caramel Macchiato">
+                    <img src="images/coffee1.jpg" alt="Caramel Macchiato">
                     <h3>Caramel Macchiato</h3>
                     <p>P120</p>
                 </div>
                 <div class="best-seller-card">
-                    <img src="https://via.placeholder.com/300x350" alt="Mocha Latte">
+                    <img src="images/coffee2.jpg" alt="Mocha Latte">
                     <h3>Mocha Latte</h3>
                     <p>P125</p>
                 </div>
                 <div class="best-seller-card">
-                    <img src="https://via.placeholder.com/300x350" alt="Spanish Latte">
+                    <img src="images/coffee1.jpg" alt="Spanish Latte">
                     <h3>Spanish Latte</h3>
                     <p>P130</p>
                 </div>
@@ -188,17 +343,16 @@
     </section>
 
     <footer>
-        <div class="container">
-            <div class="footer-links">
+        <div class="footer-container">
+            <!-- <div class="footer-links">
                 <ul>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="index.html">At Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </div>
-            <p>&copy; 2024 FiCo Cafe. All rights reserved.</p>
+            </div> -->
+            <p class="footer-copyright">© 2024 FiCo Cafe. All rights reserved.</p>
         </div>
     </footer>
 

@@ -9,10 +9,10 @@ body {
 }
 
 main {
-    flex: 1; /* Allows the main content to expand and push the footer down */
+    flex: 1;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
+    justify-content: center;
+    align-items: center;
 }
 
 .about {
@@ -21,7 +21,7 @@ main {
     padding: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%; /* Ensure it takes full width */
+    width: 100%;
 }
 
 /* Center the container inside .about */
@@ -115,4 +115,4 @@ footer {
     text-align: center;
     width: 100%;
     position: relative;
-}
+}   
