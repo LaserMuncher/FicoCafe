@@ -424,5 +424,7 @@ footer {
     }
     .hero-content p{
         font-size: 1rem;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
     }
 }
