@@ -1,0 +1,687 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Center the contents within the container */
+}
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.8s ease; /* Transition for the animation */
+}
+
+.container-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px; /* Add padding to the container-header for some spacing */
+}
+
+.container-header-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0;
+    margin-left: 80px; /* Add margin to move the logo to the right */
+}
+
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px; /* Initial border radius for the navbar items */
+    transition: background-color 0.5s ease; /* Transition for hover effect */
+}
+
+nav ul li a:hover {
+    background-color: rgba(111, 79, 40, 0.1);
+}
+
+/* Change the navbar on scroll */
+header.scrolled {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-radius: 20px; /* Rounded corners on scroll */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for floating effect */
+    width: 80%; /* Reduce width to make it thinner */
+    left: 50%;
+    transform: translateX(-50%); /* Center the navbar */
+}
+
+header.scrolled .container-header {
+    padding: 0 10px;
+}
+
+header.scrolled .logo img {
+    height: 80px;
+    width: 80px;
+    margin-left: 10px; /* Adjust margin when scrolled */
+}
+
+header.scrolled nav ul li a {
+    padding: 5px 10px; /* Adjust padding for smaller navbar items */
+    border-radius: 10px; /* More rounded corners on scroll */
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+                                                                            /* Carousel Styles */
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 99.5vw; /* Set width to full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center carousel and extend to edges */
+    height: 800px; /* Adjust as needed */
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.carousel-controls-container {
+    position: absolute;
+    bottom: 10px; /* Position the controls at the bottom */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%); /* Radial gradient */
+    border: 2px solid #fff; /* White border */
+    border-radius: 50%; /* Circular shape */
+    width: 40px; /* Size of the button */
+    height: 40px; /* Size of the button */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5rem; /* Adjust size of the arrow */
+    color: #ff8a00; /* Arrow color */
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    outline: none; /* Remove default outline */
+}
+
+.carousel-control.prev {
+    margin-right: 15px;
+}
+
+.carousel-control.next {
+    margin-left: 15px;
+}
+
+.carousel-control:hover {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%); /* Lighter gradient on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.carousel-buttons {
+    display: flex;
+    gap: 5px; /* Space between buttons */
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-button.active {
+    background-color: #fff; /* Active button color */
+}
+
+.carousel-button:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Hover effect */
+}
+/* Enhanced Carousel Button Styles */
+.carousel-button {
+    background: rgba(255, 255, 255, 0) 100%;
+    border: 2px solid #fff; /* White border */
+    width: 16px; /* Size of the button */
+    height: 16px; /* Size of the button */
+    border-radius: 50%; /* Circular shape */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    outline: none; /* Remove default outline */
+}
+
+.carousel-button.active {
+    background: rgb(255, 255, 255) 100%;
+    border-color: #ff8a00; /* Highlight border color for active state */
+    transform: scale(1.2); /* Slightly larger when active */
+}
+
+.carousel-button:hover {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%); /* Lighter gradient on hover */
+    transform: scale(1.3); /* Slightly larger on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow on hover */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+                                                                            /* CAROUSEL CSS */
+
+.cta-button {
+    background-color: #6f4f28;
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Menu Section */
+.menu {
+    padding: 50px 20px;
+    background-color: #ece1cf;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.menu-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* About Section */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.about {
+    position: relative;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.about::before {
+    content: ""; /* Required for pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("images/overlay.jpg") no-repeat center center; /* Use your transparent pattern image */
+    background-size: cover; /* Make sure the pattern covers the entire section */
+    opacity: 0.2; /* Adjust transparency */
+    pointer-events: none; /* Ensure it doesn’t block interactions */
+    z-index: 1; /* Place it above the background color but below other content */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    position: relative;
+    z-index: 2; /* Ensure the content is above the overlay */
+    overflow: hidden; /* Clearfix to handle floating elements */
+    margin-top: 20px;
+}
+
+.image-card {
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 12px; /* Curvature for the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    box-sizing: border-box; /* Include padding and border in the element's width and height */
+}
+
+.image-card.small {
+    float: left; /* Float the image to the left */
+    width: calc(30% - 20px); /* Smaller width for the first image */
+    margin: 10px 210px 30px 10px; /* Space around the card */
+}
+
+.image-card.right-image {
+    float: right; /* Float the new image card to the right */
+    width: calc(40% - 20px); /* Adjust width considering margins */
+    margin: 40px 10px 10px 50px; /* Space around the card */
+}
+
+.image-card img {
+    width: 100%; /* Fit image to the width of the card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 12px; /* Match the curvature of the card */
+}
+
+.about-card {
+    float: left; /* Float the cards to the left */
+    width: calc(50% - 20px); /* Fit width to allow two items per row, considering margins */
+    margin: 10px; /* Space around the card */
+    background-color: #fafafa;
+    padding: 20px;
+    border-radius: 12px; /* Curvature for the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+.about-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-card p {
+    color: #666;
+}
+
+.about-card:hover {
+    transform: translateY(-5px); /* Smooth upward hover effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+
+@media screen and (max-width: 768px) {
+    .image-card,
+    .about-card {
+        width: 100%; /* Full width on small screens */
+        margin: 10px 0; /* Space above and below on small screens */
+        float: none; /* Remove float on small screens */
+    }
+}
+
+.about p {
+    font-size: 1.2rem;
+}
+
+
+/* Contact Section */
+/* Contact Section */
+.contact {
+    padding: 50px 20px;
+    background-color: #ece1cf;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact input, .contact textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.contact button {
+    background-color: #6f4f28;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Social Media Icons */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Individual Icon Styles with Circular Border */
+.icon {
+    width: 5.625rem; /* Container size */
+    height: 5.625rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none; /* Remove underline */
+    border-radius: 50%; /* Make the icon container circular */
+    border: 2px solid var(--color); /* Add circular border with respective color */
+}
+
+/* Icon Styling with Larger Size and Respective Colors */
+.icon i {
+    font-size: 3rem; /* Increase the size of the logo */
+    color: var(--color); /* Use respective color */
+}
+
+/* Specific Colors for Each Icon */
+.icon.instagram {
+    --color: #d675ac; /* Instagram color */
+}
+
+.icon.facebook {
+    --color: #3b5998; /* Facebook color */
+}
+
+.icon.tiktok {
+    --color: #363636; /* TikTok color */
+}
+
+/* Hover Effect on Icon */
+.icon:hover > i {
+    transform: scale(1.2); /* Slightly enlarge the logo on hover */
+    color: #f1f1f1; /* Change the color on hover if desired */
+}
+
+/* Background Animation */
+.icon:before {
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    left: -110%;
+    top: 80%;
+    transform: rotate(45deg);
+    background: var(--color); /* Background color matching the logo */
+}
+
+/* Hover State for Background Animation */
+.icon:hover:before {
+    animation: slide 0.7s forwards;
+}
+
+/* Keyframes for Slide Animation */
+@keyframes slide {
+    50% {
+        left: 10%;
+        top: -40%;
+    }
+    100% {
+        left: -15%;
+        top: -15%;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer-links ul li {
+    margin: 0 15px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.social-icons {
+    margin: 2rem 0;
+}
+
+.social-icons a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #555;
+}
+
+.map-container {
+    margin: 3rem 0;
+}
+
+.map-container img {
+    width: 80%;
+    max-width: 37.5rem;
+    height: auto;
+    border: 0.125rem solid #ccc;
+    cursor: pointer;
+}
+
+.details {
+    margin-top: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo img {
+        height: 80px;
+        width: 80px;
+        margin-left: 50px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* For mobile devices (portrait view) */
+@media screen and (max-width: 768px) {
+    .container-header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 60px;
+        width: 60px;
+        margin-left: 0; /* Center the logo on mobile */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 15px; /* More rounded edges for mobile */
+    }
+
+    header.scrolled {
+        width: 95%; /* More space for the navbar on smaller screens */
+        border-radius: 15px;
+    }
+
+    header.scrolled .logo img {
+        height: 50px;
+        width: 50px;
+    }
+
+    header.scrolled nav ul li a {
+        padding: 7px 15px;
+        border-radius: 8px; /* Adjust padding and border-radius for mobile */
+    }
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    right: 20px; /* Align to the right side of the navbar */
+    transform: translateY(-50%);
+}
+
+.hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive: Hide navbar links on small screens */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the normal navbar links */
+    }
+    
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+
+    /* Show navbar when hamburger is active */
+    .nav-opened nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on your navbar height */
+        right: 20px; /* Align with the right edge */
+        background-color: white;
+        width: 200px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-opened nav ul li {
+        margin: 10px 0;
+        text-align: right;
+    }
+}
+
+/* Media Queries for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .carousel {
+        height: 20vh; /* Adjust height for smaller screens */
+    }
+
+    .carousel-control {
+        width: 25px; /* Smaller size for the controls */
+        height: 25px; /* Smaller size for the controls */
+        font-size: 1rem; /* Smaller arrow size */
+    }
+
+    .carousel-button {
+        width: 8px; /* Smaller size for the indicators */
+        height: 8px; /* Smaller size for the indicators */
+    }
+
+    .carousel-button.active {
+        width: 10px; /* Slightly larger active button size */
+        height: 12px; /* Slightly larger active button size */
+    }
+}
