@@ -16,14 +16,36 @@ body {
 }
 
 /* Header */
+@keyframes change-style {
+	to {  top: 2%;
+        transform: translateX(1%);
+        border-radius: 2rem;
+        width: 98%;
+        
+    }
+}
+
+@keyframes change-style-menu {
+	to {
+        transform: translateX(1%);
+        border-radius: 1rem;
+        
+    }
+}
+
 header {
     background-color: #ffffff;
-    padding: 10px 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    transition: all 0.8s ease; /* Transition for the animation */
+    animation: change-style linear both;
+    transition: ease-in-out 0.3s;
+    animation-timeline: scroll();
+	animation-range: 0 9.375rem;
+    -webkit-box-shadow: 0px 12px 27px -8px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 12px 27px -8px rgba(0,0,0,0.75);
+    box-shadow: 0px 12px 27px -8px rgba(0,0,0,0.75);
 }
 
 .container-header {
@@ -47,7 +69,6 @@ header {
     margin: 0;
     margin-left: 80px; /* Add margin to move the logo to the right */
 }
-
 
 
 nav ul {
@@ -74,31 +95,6 @@ nav ul li a:hover {
     background-color: rgba(111, 79, 40, 0.1);
 }
 
-/* Change the navbar on scroll */
-header.scrolled {
-    background-color: #ffffff;
-    padding: 5px 0;
-    border-radius: 20px; /* Rounded corners on scroll */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for floating effect */
-    width: 80%; /* Reduce width to make it thinner */
-    left: 50%;
-    transform: translateX(-50%); /* Center the navbar */
-}
-
-header.scrolled .container-header {
-    padding: 0 10px;
-}
-
-header.scrolled .logo img {
-    height: 80px;
-    width: 80px;
-    margin-left: 10px; /* Adjust margin when scrolled */
-}
-
-header.scrolled nav ul li a {
-    padding: 5px 10px; /* Adjust padding for smaller navbar items */
-    border-radius: 10px; /* More rounded corners on scroll */
-}
 
 /* Hero Section */
 .hero {
@@ -339,10 +335,14 @@ footer {
     }
 
     nav ul {
+    animation: change-style-menu linear both;
+    transition: ease-in-out 0.3s;
+    animation-timeline: scroll();
+    animation-range: 0 9.375rem;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        margin-top: 10px;
+        margin-top: 2rem;
     }
 
     nav ul li {
@@ -353,21 +353,6 @@ footer {
         padding: 10px 20px;
         font-size: 1rem;
         border-radius: 15px; /* More rounded edges for mobile */
-    }
-
-    header.scrolled {
-        width: 95%; /* More space for the navbar on smaller screens */
-        border-radius: 15px;
-    }
-
-    header.scrolled .logo img {
-        height: 50px;
-        width: 50px;
-    }
-
-    header.scrolled nav ul li a {
-        padding: 7px 15px;
-        border-radius: 8px; /* Adjust padding and border-radius for mobile */
     }
 }
 
@@ -408,7 +393,7 @@ footer {
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjust based on your navbar height */
+        top: 29px; /* Adjust based on your navbar height */
         right: 20px; /* Align with the right edge */
         background-color: white;
         width: 200px;
