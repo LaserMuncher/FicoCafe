@@ -4,31 +4,17 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-}
-
-main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .about {
-    min-height: 130vh;
     position: relative;
     padding: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+    background-color: #fff;
 }
 
-/* Center the container inside .about */
 .container {
-    margin-top: 5rem !important;
-    max-width: 50rem;
-    margin: auto; /* Center horizontally */
+    max-width: 70rem;
+    margin: 0 auto;
     padding: 2rem 1rem;
     position: relative;
     display: flex;
@@ -48,39 +34,58 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 5rem;
+}
+
+/* Three-column text layout */
+.text-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 5rem;
 }
 
 .about-card {
-    flex: 1 1 calc(33.333% - 1rem);
+    flex: 1 1 calc(33.333% - 2rem); /* Adjusted to account for the gap */
     background-color: #fafafa;
-    padding: 1rem;
-    border-radius: 0.5rem;
+    padding: 1rem 1rem;
+    border-radius: 2rem;
     box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
-    text-align: justify;
+    text-align: center; /* Center text horizontally */
     box-sizing: border-box;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content evenly */
+    min-height: 10rem; /* Ensure sufficient height */
+    align-items: center; /* Center items vertically */
 }
 
 .about-card h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    color: #333;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 2rem;
+    margin-top: .5rem; /* Push to the top of the card */
+    color: #6f4f28;
 }
 
 .about-card p {
-    color: #666;
-    margin-bottom: 1rem;
+    font-family: 'Kollektif', sans-serif;
+    color: #000000;
+    margin-top: -1rem; /* Push to the bottom of the card */
+    flex-grow: 1; /* Ensure the paragraph takes up remaining space */
+    display: flex;
+    align-items: center; /* Center text vertically */
 }
 
-/* Hover Effect */
+
 .about-card:hover {
     transform: translateY(-0.25rem);
     box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Media Queries for Responsiveness */
+
+/* Responsive design */
 @media screen and (max-width: 48rem) {
     .text-content {
         flex-direction: column;
@@ -91,7 +96,65 @@ main {
     }
 }
 
+/* Add keyframes for fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: Add a slight upward movement */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initially hide the images */
+.image-content img {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Stagger the animations */
+.image-content img:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.image-content img:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+/* Initially hide the columns */
+.about-card {
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-name: fadeIn;
+}
+
+/* Apply delay to columns after images fade in */
+.about-card:nth-child(1) {
+    animation-delay: 1.2s; /* Delay after the last image */
+}
+
+.about-card:nth-child(2) {
+    animation-delay: 1.4s; /* Delay after the last image */
+}
+
+.about-card:nth-child(3) {
+    animation-delay: 1.6s; /* Delay after the last image */
+}
+
+/* Media queries for mobile responsiveness */
 @media (max-width: 768px) {
+    .text-and-image {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-card {
+        flex-basis: 100%;
+        margin: 10px 0;
+    }
     .tagline {
         font-size: 2.5rem;
     }
@@ -109,10 +172,89 @@ main {
     }
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    position: relative;
-}   
+/* Add this to your aboutus.css file */
+
+/* Vision and Mission Section */
+.vision-mission {
+    background-color: rgba(255, 255, 255, 0.9); /* Soft white with slight transparency */
+    padding: 2rem 2rem; /* Generous padding for breathing space */
+    margin-top: 2rem; /* Space above the section */
+    border-radius: 2rem; /* Rounded corners for a smooth look */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center-align all content */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(20px); /* Position for fade-in animation */
+    animation: fadeInUp 1s forwards 0.5s; /* Animate box in with a delay */
+}
+
+.vision-mission h2 {
+    font-family: 'League Gothic', sans-serif; /* Heading font */
+    font-size: 2.5rem; /* Larger font size for headings */
+    color: #6f4f28; /* Coffee-colored heading */
+    margin-bottom: 2rem; /* Space below heading */
+    margin-top: .5rem;
+    text-transform: uppercase; /* Uppercase headings for emphasis */
+}
+
+.vision-mission p {
+    font-family: 'Kollektif', sans-serif; /* Body font */
+    font-size: 1.2rem; /* Font size for readability */
+    color: #333; /* Dark text color for contrast */
+    line-height: 1.7; /* Comfortable line spacing */
+    max-width: 70rem; /* Limit text width for readability */
+    margin: 0 auto 2rem auto; /* Center align and margin below */
+    text-align: justify; /* Justify text for neat paragraphs */
+}
+
+.vision-mission p:last-of-type {
+    margin-bottom: 0; /* Remove margin from the last paragraph */
+}
+
+/* Animation */
+.vision-box, .mission-box {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards;
+}
+
+.vision-box {
+    animation-delay: 0.5s;
+}
+
+.mission-box {
+    animation-delay: 1s;
+}
+
+.vision-box h2, .vision-box p, .mission-box h2, .mission-box p {
+    opacity: 0;
+    animation: fadeInText 1s forwards;
+}
+
+.vision-box h2 {
+    animation-delay: 1.5s;
+}
+
+.vision-box p {
+    animation-delay: 2s;
+}
+
+.mission-box h2 {
+    animation-delay: 2.5s;
+}
+
+.mission-box p {
+    animation-delay: 3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInText {
+    to {
+        opacity: 1;
+    }
+}
