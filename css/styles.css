@@ -118,7 +118,7 @@ nav ul li a:hover {
 .carousel {
     position: relative;
     overflow: hidden;
-    width: 99.5vw; /* Set width to full viewport width */
+    width: 99.4vw; /* Set width to full viewport width */
     margin-left: calc(-50vw + 50%); /* Center carousel and extend to edges */
     height: 800px; /* Adjust as needed */
 }
