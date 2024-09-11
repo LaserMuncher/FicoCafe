@@ -5,102 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - FiCo Cafe</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/contact.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 </head>
 <body>
-</br></br></br>
-<header>
-    <div class="container-header">
-        <a href="#" class="logo"><img src="images/logo.jpg" alt="FiCo Cafe Logo"></a>
-        <div class="container-header-content">
-            <nav>
+    <header>
+        <div class="container-header">
+            <a href="#" class="logo"><img src="images/logo.jpg" alt="FiCo Cafe Logo"></a>
+            <div class="container-header-content">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="aboutUs.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <!-- Left Section - Where to Find Us -->
+            <div class="left-section">
+                <h2>Where to Find Us</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.6661803347025!2d123.89609821519437!3d10.294818371611552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99f80452a0a49%3A0x463f833f52014725!2sFiCo%20Cafe!5e0!3m2!1sen!2sph!4v1632564854159!5m2!1sen!2sph"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <p>Location: 2F-A Gloans Annex, Sto Rosario St., Angeles City</p>
+            </div>
+
+            <!-- Right Section - Social Media, Contact Info, and Form -->
+            <div class="right-section">
+                <h2>Social Media</h2>
+                <div class="wrapper" style="margin-bottom: 2rem;">
+                    <a href="https://www.instagram.com/fi.co.cafe/" class="icon instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/ficocafe/" class="icon facebook" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@ficocafe" class="icon tiktok" target="_blank">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+
+                <h3>More Information about FiCo Cafe</h3>
+                <p>For Pickup & Delivery: Grab <br> +63 9190640547</p>
+
+                <h3>Contact Us</h3>
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="menu.html">Menu</a></li>
                     <li><a href="aboutUs.html">About Us</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </nav>
-        </div>
-    </div>
-    <div class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</header>
-
-<section id="contact" class="contact">
-    <div class="container" style="display: flex; flex-direction: column; align-items: center;">
-        <h1 style="margin-bottom: 2rem; font-size: 2.5rem;">Get in touch with us</h1>
-
-        <!-- Social Media Icons -->
-        <div class="wrapper" style="margin-bottom: 2rem;">
-            <a href="https://www.instagram.com/fi.co.cafe/" class="icon instagram" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            <a href="https://www.facebook.com/ficocafe/" class="icon facebook" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://www.tiktok.com/@ficocafe" class="icon tiktok" target="_blank">
-                <i class="fa-brands fa-tiktok"></i>
-            </a>
-        </div>
-
-        <!-- Flexbox Layout for Map and Contact Form -->
-        <div class="contact-content" style="display: flex; justify-content: space-between; width: 100%; max-width: 1000px;">
-            <!-- Map Location -->
-            <div class="map-container" style="flex: 1; margin-right: 2rem;">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.6566686928763!2d120.589182!3d15.1337668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f3480958822d%3A0xd3052ee5e476e319!2sFI.CO%20Cafe!5e0!3m2!1sen!2sph!4v1637251599220!5m2!1sen!2sph" 
-                    width="100%" 
-                    height="400" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-                    <!-- Contact Details -->
-                <div class="details" style="margin-top: 1rem;">
-                    <p>Location: 2F-A Gloans Annex, Sto Rosario St., Angeles City</p>
-                    <p>Contact Number: 09190640547</p>
-                </div>
             </div>
-
-            <!-- Contact Form -->
-            <div class="contact-form" style="flex: 1; margin-left: 2rem;">
-                <h2 style="margin-bottom: 2rem;">Contact Us</h2>
-                <form action="mailto:info@ficocafe.com" method="post" enctype="text/plain" style="width: 100%; max-width: 500px;">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required style="width: 100%; margin-bottom: 1rem;">
-                    
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required style="width: 100%; margin-bottom: 1rem;">
-                    
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="5" required style="width: 100%; margin-bottom: 1rem;"></textarea>
-                    
-                    <button type="submit" style="width: 100%;">Send</button>
-                </form>
-            </div>
+            <p class="footer-copyright">&copy; 2024 FiCo Cafe. All rights reserved.</p>
         </div>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <div class="footer-links">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <p class="footer-copyright">&copy; 2024 FiCo Cafe. All rights reserved.</p>
-    </div>
-</footer>
+    </footer>
 
     <script src="js/scroll.js"></script>
     <script src="js/hamburger.js"></script>

@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
         autoplaySpeed: 2000
     });
 });
-
 // Filtering menu items based on category
 function filterMenu(category) {
     const allItems = document.querySelectorAll('.menu-card');
+    const buttons = document.querySelectorAll('.menu-filter button');
 
     if (category === 'all') {
         allItems.forEach(item => {
@@ -27,5 +27,27 @@ function filterMenu(category) {
                 item.style.display = 'none';
             }
         });
+    }
+
+    // Remove selected class from all buttons
+    buttons.forEach(button => button.classList.remove('selected'));
+
+    // Add selected class to the clicked button
+    const selectedButton = Array.from(buttons).find(button => button.textContent.toLowerCase() === category.toLowerCase() || category === 'all' && button.textContent.toLowerCase() === 'all');
+    if (selectedButton) {
+        selectedButton.classList.add('selected');
+
+        // Scroll to the selected button on mobile
+        if (window.innerWidth <= 768) {
+            const menuFilter = document.querySelector('.menu-filter');
+            const buttonOffset = selectedButton.offsetLeft;
+            const menuFilterWidth = menuFilter.offsetWidth;
+            const buttonWidth = selectedButton.offsetWidth;
+            const scrollPosition = buttonOffset - (menuFilterWidth / 2) + (buttonWidth / 2);
+            menuFilter.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
+            });
+        }
     }
 }

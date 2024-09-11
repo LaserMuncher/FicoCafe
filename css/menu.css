@@ -1,9 +1,9 @@
-
 .menu-slider-wrapper {
     display: flex;
     justify-content: space-between;
     padding: 20px;
     gap: 20px; /* Adds space between the menu and slider */
+    background-color: #ece1cf;
 }
 
 .menu-section {
@@ -31,14 +31,38 @@
     flex-shrink: 0; /* Ensures the button doesn’t shrink when scrolling */
 }
 
+.menu-filter button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #d4c6b6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    flex-shrink: 0; /* Ensures the button doesn’t shrink when scrolling */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    border-radius: 4px; /* Rounded corners for buttons */
+}
+
+/* Hover effect */
+.menu-filter button:hover {
+    background-color: #b09b8c; /* Darker background on hover */
+    color: #fff; /* Text color on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Focus effect for accessibility */
+.menu-filter button:focus {
+    outline: 2px solid #fff; /* Visible focus indicator */
+    outline-offset: 2px;
+}
+
 .menu-grid {
     display: flex;
     flex-wrap: wrap;
-    /* background-color: red; */
-    max-height: 50rem;
-    overflow: scroll;
+    overflow: hidden; /* Default to no scroll */
 }
 
+/* Menu card styling */
 .menu-card {
     background-color: white;
     width: 200px;
@@ -64,7 +88,6 @@
 .best-seller {
     flex: 0.5;
     text-align: center;
-    /* background-color: rgb(255, 0, 0); */
 }
 
 .best-seller h2 {
@@ -86,7 +109,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.best-seller-card h3{
+.best-seller-card h3 {
     padding: 15px;
 }
 
@@ -124,10 +147,34 @@
         margin-top: 30px;
     }
 
-    /* Scrollable category filter for mobile */
-    .menu-filter {
-        justify-content: flex-start;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch; /* Ensures smooth scrolling on mobile */
+    /* Scrollable menu grid for mobile */
+    .menu-grid {
+        flex-direction: row; /* Arrange items in a horizontal row */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap; /* Prevent line breaks for horizontal scroll */
+        max-height: 80vh; /* Limit height to enable scrolling */
+        padding-bottom: 10px; /* Padding to ensure scroll bar is visible */
+    }
+
+    .menu-card {
+        display: inline-block; /* Display items inline for horizontal layout */
+        flex: none; /* Prevent items from growing or shrinking */
+        width: 200px; /* Set a fixed width for the cards */
+        margin: 10px; /* Space between items */
+    }
+}
+
+/* For desktop and larger screens (vertical scrolling) */
+@media (min-width: 769px) {
+    .menu-grid {
+        flex-direction: row; /* Arrange items in rows */
+        overflow-y: auto; /* Enable vertical scrolling */
+        max-height: 80vh; /* Adjust height as needed */
+        padding-right: 10px; /* Padding to ensure scroll bar is visible */
+    }
+
+    .menu-card {
+        flex: 1 1 200px; /* Allow items to grow and shrink */
+        margin: 10px; /* Space between items */
     }
 }
