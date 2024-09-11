@@ -17,6 +17,7 @@
     background-color: #d8cab8; 
     scrollbar-width: thin; 
     scrollbar-color: #ceaf83 transparent; 
+    padding-bottom: 1rem;
 }
 
 /* Filter Buttons */
@@ -112,7 +113,7 @@
 }
 
 .menu-card img {
-    width: 13.5rem;
+    width: 15.75rem;
     height: 18.875rem;
     object-fit: cover;
     border-radius: 0.5rem; 
@@ -160,6 +161,7 @@
     border-radius: 0.5rem; 
     margin-bottom: 0.625rem; 
 }
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {

@@ -138,7 +138,9 @@ nav ul li a:hover {
     height: auto;
     object-fit: cover;
 }
-
+.carousel-inner video {
+    margin-top: -10rem;
+}
 
 .carousel-controls-container {
     position: absolute;
@@ -426,5 +428,9 @@ footer {
         font-size: 1rem;
         margin-left: 0.5rem;
         margin-right: 0.5rem;
+    }
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
     }
 }
