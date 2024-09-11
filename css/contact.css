@@ -12,29 +12,6 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.container-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-.container-header-content {
-    display: flex;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #000;
-}
-
 section.contact {
     min-height: 100vh;
 }
@@ -53,19 +30,11 @@ section.contact {
 
 /* Ensure the footer has relative positioning for the absolute child */
 footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    width: 100%;
     position: relative;
-    padding: 20px; /* Adjust as needed */
-    margin-top: auto; /* Ensure footer sticks to the bottom */
-}
-
-/* Position the copyright text at the bottom right */
-.footer-copyright {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 0;
-    padding: 10px; /* Adjust as needed */
-    font-size: 0.8rem; /* Adjust text size if needed */
 }
 
 
@@ -114,16 +83,6 @@ margin-top: 10px;
 .right-section h2, .right-section h3 {
 font-size: 1.8rem;
 margin-bottom: 15px;
-}
-
-.social-media-icons a {
-margin-right: 10px;
-text-decoration: none;
-}
-
-.social-media-icons img {
-width: 40px;
-height: 40px;
 }
 
 .right-section p {
@@ -203,12 +162,13 @@ background-color: #333;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    width: max-content;
 }
 
 /* Individual Icon Styles with Circular Border */
 .icon {
-    width: 5.625rem; /* Container size */
-    height: 5.625rem;
+    width: 3.5rem; /* Container size */
+    height: 3.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
