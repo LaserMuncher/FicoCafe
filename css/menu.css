@@ -112,7 +112,7 @@
 }
 
 .menu-card img {
-    width: 15.75rem;
+    width: 13.5rem;
     height: 18.875rem;
     object-fit: cover;
     border-radius: 0.5rem; 
@@ -160,7 +160,6 @@
     border-radius: 0.5rem; 
     margin-bottom: 0.625rem; 
 }
-
 
 /* Responsive Styles */
 @media (max-width: 768px) {
