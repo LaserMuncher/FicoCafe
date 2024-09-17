@@ -1,4 +1,5 @@
-/* About Section */
+/*About Section */
+/* General Body and Section Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,9 +8,13 @@ body {
 }
 
 .about {
+    background-image: url('images/AboutUsPage.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
     position: relative;
-    padding: 0;
-    background-color: #fff;
+    padding: 2rem 1rem;
+    overflow: hidden;
 }
 
 .container {
@@ -21,14 +26,6 @@ body {
     flex-direction: column;
 }
 
-/* Image Content */
-.image-content {
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 /* Text Content (Three-column layout) */
 .text-content {
     display: flex;
@@ -37,53 +34,44 @@ body {
     margin-top: 5rem;
 }
 
-/* Three-column text layout */
-.text-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin-top: 5rem;
-}
-
+/* Shared Box Styling (for About, Vision, and Mission sections) */
 .about-card {
-    flex: 1 1 calc(33.333% - 2rem); /* Adjusted to account for the gap */
+    flex: 1 1 calc(33.333% - 2rem); /* Adjust for columns */
     background-color: #fafafa;
     padding: 1rem 1rem;
     border-radius: 2rem;
     box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center text horizontally */
+    text-align: center;
     box-sizing: border-box;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribute content evenly */
-    min-height: 10rem; /* Ensure sufficient height */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    min-height: 10rem;
+    align-items: center;
 }
 
-.about-card h3 {
+.about-card h3, .about-card h2 {
     font-family: 'League Gothic', sans-serif;
     font-size: 2rem;
-    margin-top: .5rem; /* Push to the top of the card */
+    margin-top: .5rem;
     color: #6f4f28;
 }
 
 .about-card p {
     font-family: 'Kollektif', sans-serif;
     color: #000000;
-    margin-top: -1rem; /* Push to the bottom of the card */
-    flex-grow: 1; /* Ensure the paragraph takes up remaining space */
+    margin-top: -1rem;
+    flex-grow: 1;
     display: flex;
-    align-items: center; /* Center text vertically */
+    align-items: center;
 }
-
 
 .about-card:hover {
     transform: translateY(-0.25rem);
     box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 /* Responsive design */
 @media screen and (max-width: 48rem) {
@@ -100,27 +88,12 @@ body {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(1.25rem); /* Optional: Add a slight upward movement */
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Initially hide the images */
-.image-content img {
-    opacity: 0;
-    animation: fadeIn 0.5s ease-in-out forwards;
-}
-
-/* Stagger the animations */
-.image-content img:nth-child(1) {
-    animation-delay: 0.3s;
-}
-
-.image-content img:nth-child(2) {
-    animation-delay: 0.6s;
 }
 
 /* Initially hide the columns */
@@ -132,88 +105,43 @@ body {
     animation-name: fadeIn;
 }
 
-/* Apply delay to columns after images fade in */
 .about-card:nth-child(1) {
-    animation-delay: 1.2s; /* Delay after the last image */
+    animation-delay: 1.2s;
 }
 
 .about-card:nth-child(2) {
-    animation-delay: 1.4s; /* Delay after the last image */
+    animation-delay: 1.4s;
 }
 
 .about-card:nth-child(3) {
-    animation-delay: 1.6s; /* Delay after the last image */
+    animation-delay: 1.6s;
 }
 
 /* Media queries for mobile responsiveness */
 @media (max-width: 48rem) {
-    .text-and-image {
+    .about {
+        padding: 0.625rem;
+        overflow-y: auto;
+    }
+    .text-content {
         flex-direction: column;
-        text-align: center;
     }
     .about-card {
         flex-basis: 100%;
         margin: 0.625rem 0;
     }
-    .tagline {
-        font-size: 2.5rem;
+    h2, h3 {
+        font-size: 1.5rem;
     }
-}
-
-@media (max-width: 30rem) {
-    .tagline {
-        font-size: 2rem;
+    p {
+        font-size: 1rem;
     }
-    .about-card h3 {
-        font-size: 1.25rem;
-    }
-    .about-card p {
-        font-size: 0.95rem;
-    }
-}
-
-/* Add this to your aboutus.css file */
-
-/* Vision and Mission Section */
-.vision-mission {
-    background-color: rgba(255, 255, 255, 0.9); /* Soft white with slight transparency */
-    padding: 2rem 2rem; /* Generous padding for breathing space */
-    margin-top: 2rem; /* Space above the section */
-    border-radius: 2rem; /* Rounded corners for a smooth look */
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: center; /* Center-align all content */
-    opacity: 0; /* Initially hidden */
-    transform: translateY(1.25rem); /* Position for fade-in animation */
-    animation: fadeInUp 1s forwards 0.5s; /* Animate box in with a delay */
-}
-
-.vision-mission h2 {
-    font-family: 'League Gothic', sans-serif; /* Heading font */
-    font-size: 2.5rem; /* Larger font size for headings */
-    color: #6f4f28; /* Coffee-colored heading */
-    margin-bottom: 2rem; /* Space below heading */
-    margin-top: .5rem;
-    text-transform: uppercase; /* Uppercase headings for emphasis */
-}
-
-.vision-mission p {
-    font-family: 'Kollektif', sans-serif; /* Body font */
-    font-size: 1.2rem; /* Font size for readability */
-    color: #333; /* Dark text color for contrast */
-    line-height: 1.7; /* Comfortable line spacing */
-    max-width: 70rem; /* Limit text width for readability */
-    margin: 0 auto 2rem auto; /* Center align and margin below */
-    text-align: justify; /* Justify text for neat paragraphs */
-}
-
-.vision-mission p:last-of-type {
-    margin-bottom: 0; /* Remove margin from the last paragraph */
 }
 
 /* Animation */
 .vision-box, .mission-box {
     opacity: 0;
-    transform: translateY(1.25rem);
+    transform: translateY(20px);
     animation: fadeInUp 1s forwards;
 }
 
