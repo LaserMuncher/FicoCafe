@@ -1,5 +1,4 @@
-/*About Section */
-/* General Body and Section Styling */
+/* About Section */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,13 +7,9 @@ body {
 }
 
 .about {
-    background-image: url('images/AboutUsPage.png');
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
     position: relative;
-    padding: 2rem 1rem;
-    overflow: hidden;
+    padding: 0;
+    background-color: #fff;
 }
 
 .container {
@@ -26,6 +21,14 @@ body {
     flex-direction: column;
 }
 
+/* Image Content */
+.image-content {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /* Text Content (Three-column layout) */
 .text-content {
     display: flex;
@@ -34,26 +37,33 @@ body {
     margin-top: 5rem;
 }
 
-/* Shared Box Styling (for About, Vision, and Mission sections) */
+/* Three-column text layout */
+.text-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
 .about-card {
-    flex: 1 1 calc(33.333% - 2rem); /* Adjust for columns */
+    flex: 1 1 calc(33.333% - 2rem); /* Adjusted to account for the gap */
     background-color: #fafafa;
     padding: 1rem 1rem;
     border-radius: 2rem;
     box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: center; /* Center text horizontally */
     box-sizing: border-box;
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 10rem;
-    align-items: center;
+    justify-content: space-between; /* Distribute content evenly */
+    min-height: 10rem; /* Ensure sufficient height */
+    align-items: center; /* Center items vertically */
 }
 
-.about-card h3, .about-card h2 {
+.about-card h3 {
     font-family: 'League Gothic', sans-serif;
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-top: .5rem;
     color: #6f4f28;
 }
@@ -61,10 +71,10 @@ body {
 .about-card p {
     font-family: 'Kollektif', sans-serif;
     color: #000000;
-    margin-top: -1rem;
-    flex-grow: 1;
+    margin-top: -1rem; /* Push to the bottom of the card */
+    flex-grow: 1; /* Ensure the paragraph takes up remaining space */
     display: flex;
-    align-items: center;
+    align-items: center; /* Center text vertically */
 }
 
 .about-card:hover {
@@ -72,6 +82,7 @@ body {
     box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 /* Responsive design */
 @media screen and (max-width: 48rem) {
@@ -88,7 +99,7 @@ body {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(1.25rem); /* Optional: Add a slight upward movement */
     }
     to {
         opacity: 1;
@@ -96,7 +107,22 @@ body {
     }
 }
 
-/* Initially hide the columns */
+/* Initially hide the images */
+.image-content img {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Stagger the animations */
+.image-content img:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.image-content img:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+
 .about-card {
     opacity: 0;
     animation-duration: 0.5s;
@@ -105,73 +131,52 @@ body {
     animation-name: fadeIn;
 }
 
+
 .about-card:nth-child(1) {
-    animation-delay: 1.2s;
+    animation-delay: 1.2s; 
 }
 
 .about-card:nth-child(2) {
-    animation-delay: 1.4s;
+    animation-delay: 1.4s; 
 }
 
 .about-card:nth-child(3) {
-    animation-delay: 1.6s;
+    animation-delay: 1.6s; 
+}
+
+.about-card:nth-child(4) {
+    animation-delay: 1.8s; 
+}
+
+.about-card:nth-child(5) {
+    animation-delay: 2s; 
 }
 
 /* Media queries for mobile responsiveness */
 @media (max-width: 48rem) {
-    .about {
-        padding: 0.625rem;
-        overflow-y: auto;
-    }
-    .text-content {
+    .text-and-image {
         flex-direction: column;
+        text-align: center;
     }
     .about-card {
         flex-basis: 100%;
         margin: 0.625rem 0;
     }
-    h2, h3 {
-        font-size: 1.5rem;
-    }
-    p {
-        font-size: 1rem;
+    .tagline {
+        font-size: 2.5rem;
     }
 }
 
-/* Animation */
-.vision-box, .mission-box {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s forwards;
-}
-
-.vision-box {
-    animation-delay: 0.5s;
-}
-
-.mission-box {
-    animation-delay: 1s;
-}
-
-.vision-box h2, .vision-box p, .mission-box h2, .mission-box p {
-    opacity: 0;
-    animation: fadeInText 1s forwards;
-}
-
-.vision-box h2 {
-    animation-delay: 1.5s;
-}
-
-.vision-box p {
-    animation-delay: 2s;
-}
-
-.mission-box h2 {
-    animation-delay: 2.5s;
-}
-
-.mission-box p {
-    animation-delay: 3s;
+@media (max-width: 30rem) {
+    .tagline {
+        font-size: 2rem;
+    }
+    .about-card h3 {
+        font-size: 1.25rem;
+    }
+    .about-card p {
+        font-size: 0.95rem;
+    }
 }
 
 @keyframes fadeInUp {
