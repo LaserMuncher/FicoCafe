@@ -100,7 +100,7 @@ body {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Optional: Add a slight upward movement */
+        transform: translateY(1.25rem); /* Optional: Add a slight upward movement */
     }
     to {
         opacity: 1;
@@ -146,21 +146,21 @@ body {
 }
 
 /* Media queries for mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     .text-and-image {
         flex-direction: column;
         text-align: center;
     }
     .about-card {
         flex-basis: 100%;
-        margin: 10px 0;
+        margin: 0.625rem 0;
     }
     .tagline {
         font-size: 2.5rem;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
     .tagline {
         font-size: 2rem;
     }
@@ -183,7 +183,7 @@ body {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     text-align: center; /* Center-align all content */
     opacity: 0; /* Initially hidden */
-    transform: translateY(20px); /* Position for fade-in animation */
+    transform: translateY(1.25rem); /* Position for fade-in animation */
     animation: fadeInUp 1s forwards 0.5s; /* Animate box in with a delay */
 }
 
@@ -213,7 +213,7 @@ body {
 /* Animation */
 .vision-box, .mission-box {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(1.25rem);
     animation: fadeInUp 1s forwards;
 }
 
